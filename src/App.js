@@ -41,26 +41,46 @@ export default function App() {
   return (
     <div className="App">
       <h1> 🎬 IMDB's Movie Recommendations </h1>
-      <p>
+      <p style={{ fontSize: "smaller" }}>
         {" "}
         Checkout IMDB's top rated movies. Select a genre to get started{" "}
       </p>
 
       <div>
         {Object.keys(movieDB).map((genre) => (
-          <button onClick={() => genreClickHandler(genre)}>
+          <button
+            onClick={() => genreClickHandler(genre)}
+            style={{
+              cursor: "pointer",
+              background: "#E5E7EB",
+              borderRadius: "0.5rem",
+              padding: "0.5rem  1rem",
+              border: "1px solid black",
+              margin: "1rem 0.3rem"
+            }}
+          >
             {genre}
           </button>
         ))}
       </div>
       <hr />
-      <div>
-        <ul>
+      <div style={{ textAlign: "left" }}>
+        <ul style={{ paddingInlineStart: "0" }}>
           {movieDB[selectedGenre].map((movie) => (
-            <li>
+            <li
+              key={movie.name}
+              style={{
+                listStyle: "none",
+                padding: "1rem",
+                margin: "1rem 0rem",
+                borderRadius: "0.5rem",
+                border: "1px solid #000000",
+                width: "90%"
+              }}
+            >
               {" "}
-              <div> {movie.name} </div>
-              <div> {movie.rating} </div>
+              <div style={{ fontSize: "larger" }}> {movie.name} </div>
+              <div style={{ fontSize: "smaller" }}> {movie.rating} </div>
             </li>
           ))}
         </ul>
