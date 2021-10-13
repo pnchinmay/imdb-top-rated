@@ -5,4 +5,4 @@ genres.
 
 Built using **ReactJS**
 
-[Live Project](https://e1tv9.csb.app/)
+[Live Project](https://pnchinmay-imdb.netlify.app/)
