@@ -40,7 +40,7 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1> 🎬 IMDB's Movie Recommendations </h1>
+      <h1><span role="img" aria-label="movie">🎬</span> IMDB's Movie Recommendations </h1>
       <p style={{ fontSize: "smaller" }}>
         {" "}
         Checkout IMDB's top rated movies. Select a genre to get started{" "}
